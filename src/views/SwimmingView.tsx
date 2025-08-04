@@ -28,10 +28,10 @@ export function SwimmingView({ className = '' }: SwimmingViewProps) {
   const [selectedSpeciesId, setSelectedSpeciesId] = useState<string | null>(null);
   const [showInstructions, setShowInstructions] = useState(true);
 
-  // Select 3-4 critters from the preload manifest
+  // Select 3-4 critters from the preload manifest if wanted
   const displayedCritters = useMemo(() => {
-    // Take first 4 species from core species
-    const selectedSpecies = coreSpecies.slice(0, 4);
+    // Take first 4 species from core species, use slice() if needed
+    const selectedSpecies = coreSpecies;
     
     return selectedSpecies.map((species, index) => ({
       species,
