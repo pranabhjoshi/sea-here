@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+# Sea Here 🐟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Offline-first Seattle Aquarium companion: tap drifting pixel critters → quick facts. Accessible, fast, kid-friendly.
 
-Currently, two official plugins are available:
+**Status:** MVP UI shipped (Home → Info Card → Deeper Dive).  
+Camera/classifier: **planned**, interface documented.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Tap critters → Info Card (name, badge, 3 bullets, images, TTS toggle)
+- Deeper Dive: population chart with zoom/reset + fallback
+- List & Search (local fuzzy), tabbed nav
+- Offline core: 7 species preloaded; cache with TTL + ETag
 
-## Expanding the ESLint configuration
+## Stack
+React + Vite + TypeScript • Tailwind • React Router • Recharts  
+IndexedDB cache • Vitest/RTL • Playwright • GitHub Actions • Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Quick Start
+```bash
+pnpm i
+pnpm dev      # run app
+pnpm test     # unit
+pnpm e2e      # playwright (first time: npx playwright install)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Scripts
+dev • build • preview • typecheck • lint • format • test • e2e
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Notes
+- A11y: landmarks, aria-live, labeled controls, keyboard-safe modals
+- Data flow: UI → repository → (cache → API → preload fallback)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Roadmap
+- Camera view + classifier (≥0.85 threshold) + “Did you mean…?” strip
+- More conservation data; optional PWA hardening
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+AI & Prompting
+- Planned/built with Windsurf, ChatGPT (o3, o4 mini-high), Claude Sonnet 4 using a 22-step TDD roadmap.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+License
+MIT (update as needed).
