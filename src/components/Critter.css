@@ -1,0 +1,104 @@
+/**
+ * Critter component styles - Interactive floating sprites
+ */
+
+.critter {
+  position: absolute;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  animation: float 4s ease-in-out infinite;
+  z-index: 10;
+  outline: none;
+}
+
+.critter:focus-visible {
+  outline: 3px solid var(--color-focus, #0066cc);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.critter:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.critter--pressed {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
+
+.critter__sprite {
+  width: 80px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: box-shadow 0.2s ease;
+  pointer-events: none; /* Prevent image drag */
+}
+
+.critter:hover .critter__sprite {
+  box-shadow: 0 1px 1px rgba(var(--seafoam-blue));
+  transform: translateY(-2px) rotate(0.5deg);
+  animation: spin 3s linear infinite;
+}
+
+.critter__name {
+  /* Hidden but available to screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-1deg);
+  }
+}
+
+/* Different animation speeds for variety */
+.critter:nth-child(2n) {
+  animation-duration: 5s;
+}
+
+.critter:nth-child(3n) {
+  animation-duration: 3.5s;
+}
+
+.critter:nth-child(4n) {
+  animation-duration: 4.5s;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .critter__sprite {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .critter__sprite {
+    width: 40px;
+    height: 40px;
+  }
+}

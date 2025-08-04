@@ -1,0 +1,24 @@
+<svg width="80" height="50" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seal body -->
+  <ellipse cx="40" cy="25" rx="30" ry="12" fill="#708090" stroke="#556B7D" stroke-width="1"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="25" rx="12" ry="10" fill="#778899" stroke="#556B7D" stroke-width="1"/>
+  <!-- Eyes -->
+  <circle cx="65" cy="22" r="2" fill="#000"/>
+  <circle cx="65" cy="22" r="0.5" fill="#FFF"/>
+  <!-- Nose -->
+  <ellipse cx="70" cy="25" rx="1.5" ry="1" fill="#000"/>
+  <!-- Whiskers -->
+  <line x1="68" y1="23" x2="75" y2="22" stroke="#000" stroke-width="0.5"/>
+  <line x1="68" y1="25" x2="75" y2="25" stroke="#000" stroke-width="0.5"/>
+  <line x1="68" y1="27" x2="75" y2="28" stroke="#000" stroke-width="0.5"/>
+  <!-- Flippers -->
+  <ellipse cx="25" cy="30" rx="8" ry="4" fill="#778899" stroke="#556B7D" stroke-width="1"/>
+  <ellipse cx="25" cy="20" rx="8" ry="4" fill="#778899" stroke="#556B7D" stroke-width="1"/>
+  <!-- Tail flippers -->
+  <ellipse cx="15" cy="25" rx="6" ry="8" fill="#778899" stroke="#556B7D" stroke-width="1"/>
+  <!-- Spots -->
+  <circle cx="35" cy="22" r="1.5" fill="#556B7D"/>
+  <circle cx="45" cy="28" r="1" fill="#556B7D"/>
+  <circle cx="52" cy="20" r="1.5" fill="#556B7D"/>
+</svg>

@@ -1,0 +1,337 @@
+/**
+ * SwimmingView styles - Ocean environment with floating critters
+ */
+
+.swimming-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px; /* Minimum height to ensure content is visible */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--color-ocean-surface, #4a90e2) 0%,
+    var(--color-ocean-mid, #357abd) 50%,
+    var(--color-ocean-deep, #2c5aa0) 100%
+  );
+}
+
+.swimming-view__ocean {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-200) 0%,
+    var(--color-primary-400) 30%,
+    var(--color-primary-600) 70%,
+    var(--color-primary-800) 100%
+  );
+  overflow: hidden;
+}
+
+.swimming-view__water-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating bubble effects */
+.bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: bubbleFloat 8s infinite linear;
+  opacity: 0.6;
+}
+
+.bubble--1 {
+  width: 20px;
+  height: 20px;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+.bubble--2 {
+  width: 15px;
+  height: 15px;
+  left: 80%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.bubble--3 {
+  width: 25px;
+  height: 25px;
+  left: 50%;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+    transform: translateY(-10vh) scale(1);
+  }
+  100% {
+    transform: translateY(-20vh) scale(0);
+    opacity: 0;
+  }
+}
+
+.swimming-view__critters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none; /* Allow clicks to pass through container */
+}
+
+.swimming-view__critters .critter {
+  pointer-events: auto; /* Re-enable clicks on critters */
+}
+
+/*
+.swimming-view__critter {
+   Additional styles can be added here if needed 
+}
+*/
+
+.swimming-view__instructions {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  max-width: 80%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.swimming-view__instructions-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 1rem;
+  color: var(--color-neutral-700);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swimming-view__instructions-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--color-neutral-900);
+  transform: scale(1.1);
+}
+
+.swimming-view__instructions-close:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.swimming-view__instruction-text {
+  margin: 0;
+  padding: 0;
+  color: var(--color-neutral-700);
+  font-size: 0.8rem;
+  font-family: var(--font-body, 'Nunito', sans-serif);
+  animation: fadeInUp 0.5s ease-out 0.5s both;
+  line-height: 1.4;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile styles (up to 767px) */
+@media (max-width: 767px) {
+  .swimming-view__instructions {
+    bottom: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.75rem;
+    max-width: 90%;
+  }
+  
+  .swimming-view__instructions-close {
+    font-size: 0.875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.2rem;
+  }
+  
+  .swimming-view__instruction-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .swimming-view__instructions {
+    bottom: 0.75rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.9rem;
+    max-width: 85%;
+  }
+  
+  .swimming-view__instructions-close {
+    font-size: 0.9rem;
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+  
+  .swimming-view__instruction-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .swimming-view__instructions {
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+  }
+  
+  .swimming-view__instructions-close {
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .swimming-view__instruction-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ocean wave effect at the top */
+.swimming-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  z-index: 2;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-10px) scaleY(1.1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .swimming-view__instructions {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    transform: none;
+  }
+  
+  .swimming-view__instruction-text {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swimming-view__instructions {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .swimming-view__instruction-text {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .swimming-view {
+    background: linear-gradient(
+      to bottom,
+      #000080 0%,
+      #000060 50%,
+      #000040 100%
+    );
+  }
+  
+  .swimming-view__instruction-text {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000000;
+    border: 2px solid #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .bubble,
+  .swimming-view::before,
+  .swimming-view__instruction-text {
+    animation: none;
+  }
+  
+  .swimming-view__instruction-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

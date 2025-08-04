@@ -1,0 +1,226 @@
+/* Ensure full-height/full-width baseline */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  width: 100%;     
+}
+
+/* Header styles */
+.app-header {
+  background: var(--salish-green);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  flex: 0 0 auto; 
+}
+
+/* Main content area */
+.app-main {
+  flex: 1 1 auto; /* Allows the main area to grow and shrink */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Allows content to scroll if needed */
+  width: 100%;
+  position: relative; /* For absolutely positioned children */
+  flex-direction: column;
+  min-height: 0; /* Allow flex child to shrink */
+}
+
+/* Footer styles */
+.app-footer {
+  background: var(--fathom-blue);
+  padding: 1rem;
+  flex: 0 0 auto;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.tts-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--fathom-blue);
+}
+
+.tts-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tts-toggle.active {
+  background: var(--algae-green);
+  border-color: var(--algae-green);
+  color: var(--fathom-blue);
+}
+
+.tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-family: var(--font-body, 'Nunito', sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile styles (up to 767px) */
+@media (max-width: 767px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .tts-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .app-footer {
+    padding: 0.75rem;
+  }
+  
+  .tab-bar {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    min-width: 60px;
+  }
+}
+
+/* Tablet styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.375rem;
+  }
+  
+  .tts-toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.1rem;
+  }
+  
+  .app-footer {
+    padding: 1rem;
+  }
+  
+  .tab-bar {
+    gap: 0.75rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .app-header {
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .tts-toggle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .app-footer {
+    padding: 1rem;
+  }
+  
+  .tab-bar {
+    gap: 1rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .app-header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .tts-toggle {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .app-footer {
+    padding: 0.5rem;
+  }
+}

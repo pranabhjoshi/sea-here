@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@700&display=swap');
+
+:root {
+  --salish-green: #2D5F5F;
+  --fathom-blue: #1B2951;
+  --mediterranean-blue: #4A90E2;
+  --algae-green: #00D4AA;
+  --seafoam-blue: #7DD3FC;
+  --purple-star: #8B5A9F;
+  --coral-orange: #FF9580;
+  --pumice-gray: #E5E7EB;
+  --stone-gray: #6B7280;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--fathom-blue);
+  background: var(--pumice-gray);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--salish-green);
+}

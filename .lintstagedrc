@@ -1,0 +1,10 @@
+{
+  "*.{ts,tsx}": [
+    "npm run typecheck",
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "*.{js,jsx,ts,tsx,json,css,md}": [
+    "prettier --write"
+  ]
+}

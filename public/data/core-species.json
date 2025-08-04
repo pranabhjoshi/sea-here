@@ -1,0 +1,93 @@
+[
+  {
+    "id": "sea-otter",
+    "name": "Sea Otter",
+    "endangerment": "EN",
+    "bullets": {
+      "habitat": "Kelp forests and coastal waters of the North Pacific",
+      "diet": "Sea urchins, crabs, mollusks, and fish - up to 25% of body weight daily",
+      "personality": "Playful, curious, and incredibly social - they hold hands while sleeping!"
+    },
+    "photoURLs": [
+      "/images/sea-otter.svg"
+    ]
+  },
+  {
+    "id": "giant-pacific-octopus",
+    "name": "Giant Pacific Octopus",
+    "endangerment": "LC",
+    "bullets": {
+      "habitat": "Rocky dens in cold Pacific waters, from shallow tide pools to 2000ft deep",
+      "diet": "Crabs, shrimp, fish, and sharks - they're surprisingly fierce hunters",
+      "personality": "Intelligent problem-solvers with unique personalities and excellent memories"
+    },
+    "photoURLs": [
+      "/images/giant-pacific-octopus.svg"
+    ]
+  },
+  {
+    "id": "harbor-seal",
+    "name": "Harbor Seal",
+    "endangerment": "LC",
+    "bullets": {
+      "habitat": "Coastal waters, harbors, and beaches throughout the North Pacific",
+      "diet": "Fish, squid, and crustaceans - they're excellent underwater acrobats",
+      "personality": "Curious and adaptable, often seen 'spy-hopping' to check out humans"
+    },
+    "photoURLs": [
+      "/images/harbor-seal.svg"
+    ]
+  },
+  {
+    "id": "wolf-eel",
+    "name": "Wolf Eel",
+    "endangerment": "LC",
+    "bullets": {
+      "habitat": "Rocky crevices and caves in Pacific waters from Alaska to California",
+      "diet": "Sea urchins, crabs, and mollusks - their powerful jaws crush shells easily",
+      "personality": "Gentle giants that mate for life and share parenting duties"
+    },
+    "photoURLs": [
+      "/images/wolf-eel.svg"
+    ]
+  },
+  {
+    "id": "rockfish",
+    "name": "Yelloweye Rockfish",
+    "endangerment": "VU",
+    "bullets": {
+      "habitat": "Rocky reefs and underwater structures in the North Pacific",
+      "diet": "Small fish, crustaceans, and squid - they're ambush predators",
+      "personality": "Long-lived homebodies that can live over 100 years in the same area"
+    },
+    "photoURLs": [
+      "/images/placeholder-critter.svg"
+    ]
+  },
+  {
+    "id": "indo-pacific-leopard-shark",
+    "name": "Indo-Pacific Leopard Shark",
+    "endangerment": "NT",
+    "bullets": {
+      "habitat": "Shallow coastal waters, coral reefs, and sandy flats in tropical Indo-Pacific",
+      "diet": "Small fish, crustaceans, and mollusks - they're gentle bottom feeders",
+      "personality": "Docile and curious, often resting on sandy bottoms during the day"
+    },
+    "photoURLs": [
+      "/images/indo-pacific-leopard-shark.svg"
+    ]
+  },
+  {
+    "id": "moon-jelly",
+    "name": "Moon Jelly",
+    "endangerment": "LC",
+    "bullets": {
+      "habitat": "Surface waters of oceans worldwide - true cosmopolitan travelers",
+      "diet": "Plankton, small fish, and other jellies caught in their trailing tentacles",
+      "personality": "Graceful drifters that pulse rhythmically through the water like living art"
+    },
+    "photoURLs": [
+      "/images/placeholder-critter.svg"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+<svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shark body -->
+  <ellipse cx="50" cy="20" rx="35" ry="8" fill="#D2B48C" stroke="#B8860B" stroke-width="1"/>
+  <!-- Head/nose -->
+  <ellipse cx="80" cy="20" rx="15" ry="6" fill="#DEB887" stroke="#B8860B" stroke-width="1"/>
+  <!-- Tail -->
+  <path d="M15 20 L5 15 L10 20 L5 25 Z" fill="#D2B48C" stroke="#B8860B" stroke-width="1"/>
+  <!-- Dorsal fin -->
+  <path d="M45 12 Q50 5 55 12" fill="#D2B48C" stroke="#B8860B" stroke-width="1"/>
+  <!-- Pectoral fins -->
+  <ellipse cx="60" cy="25" rx="8" ry="3" fill="#DEB887" stroke="#B8860B" stroke-width="1"/>
+  <ellipse cx="60" cy="15" rx="8" ry="3" fill="#DEB887" stroke="#B8860B" stroke-width="1"/>
+  <!-- Eye -->
+  <circle cx="85" cy="18" r="2" fill="#000"/>
+  <circle cx="85.5" cy="17.5" r="0.5" fill="#FFF"/>
+  <!-- Gills -->
+  <line x1="70" y1="16" x2="68" y2="18" stroke="#B8860B" stroke-width="1"/>
+  <line x1="70" y1="18" x2="68" y2="20" stroke="#B8860B" stroke-width="1"/>
+  <line x1="70" y1="20" x2="68" y2="22" stroke="#B8860B" stroke-width="1"/>
+  <!-- Leopard spots -->
+  <circle cx="30" cy="18" r="2" fill="#8B4513"/>
+  <circle cx="40" cy="22" r="1.5" fill="#8B4513"/>
+  <circle cx="55" cy="17" r="2" fill="#8B4513"/>
+  <circle cx="65" cy="21" r="1.5" fill="#8B4513"/>
+  <circle cx="25" cy="22" r="1" fill="#8B4513"/>
+  <circle cx="48" cy="19" r="1" fill="#8B4513"/>
+</svg>

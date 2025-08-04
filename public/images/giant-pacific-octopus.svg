@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Octopus head/mantle -->
+  <ellipse cx="40" cy="30" rx="18" ry="15" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <!-- Eyes -->
+  <circle cx="35" cy="25" r="3" fill="#000"/>
+  <circle cx="45" cy="25" r="3" fill="#000"/>
+  <!-- Eye highlights -->
+  <circle cx="36" cy="24" r="1" fill="#FFF"/>
+  <circle cx="46" cy="24" r="1" fill="#FFF"/>
+  <!-- Tentacles -->
+  <path d="M25 40 Q20 50 15 60 Q12 65 18 68 Q25 65 30 55" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M30 42 Q25 55 20 70 Q18 75 24 76 Q30 73 35 60" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M40 45 Q40 60 38 75 Q37 80 43 79 Q45 75 42 60" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M50 42 Q55 55 60 70 Q62 75 56 76 Q50 73 45 60" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M55 40 Q60 50 65 60 Q68 65 62 68 Q55 65 50 55" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M35 43 Q30 58 25 72 Q23 77 29 78 Q35 75 40 62" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M45 43 Q50 58 55 72 Q57 77 51 78 Q45 75 40 62" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <path d="M40 44 Q35 58 30 73 Q28 78 34 79 Q40 76 45 63" fill="#8B0000" stroke="#660000" stroke-width="1"/>
+  <!-- Suction cups on tentacles -->
+  <circle cx="22" cy="55" r="1.5" fill="#A00000"/>
+  <circle cx="28" cy="62" r="1.5" fill="#A00000"/>
+  <circle cx="52" cy="55" r="1.5" fill="#A00000"/>
+  <circle cx="58" cy="62" r="1.5" fill="#A00000"/>
+</svg>
