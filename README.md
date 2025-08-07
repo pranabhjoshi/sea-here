@@ -1,4 +1,4 @@
-# Sea Here 🐟
+# Sea Here 🐠
 
 Offline-first Seattle Aquarium companion: tap drifting pixel critters → quick facts. Accessible, fast, kid-friendly.
 
